@@ -4,6 +4,8 @@ import Admin from './Admin.Route'
 import Client from "./Client.Route"
 
 import Login from "../Layout/Auth/Login"
+import Signup from '../Layout/Auth/Signup';
+import Home from '../Layout/Home/Header'
 
  
 const Routing = () => {
@@ -16,12 +18,16 @@ const roles= null
       navigate("/forget");
       return
     }
+    if(location.pathname==='/home'){
+        navigate('/home');
+        return 
+    }
 
     if (location.pathname === "/") {
       navigate("/login");
     }
-    if (location.pathname === "/newsignup") {
-      navigate("/newsignup");
+    if (location.pathname === "/signup") {
+      navigate("/signup");
       return 
     }
 
@@ -52,6 +58,10 @@ const roles= null
       <Route path="/admin/*" element={(roles === "ADMIN") ? <Admin /> : <Login />} />
       <Route path="/client/*" element={ <Client />} />       
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/home" element={<Home />} />
+
+
     </Routes>
 
 
