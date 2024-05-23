@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Admin from './Admin.Route'
 import Client from "./Client.Route"
+import Home from './Home.Route'
 
 import Login from "../Layout/Auth/Login"
 import Signup from '../Layout/Auth/Signup';
-import Home from '../Layout/Home/Header'
 
  
 const Routing = () => {
@@ -29,6 +29,10 @@ const roles= null
     if (location.pathname === "/signup") {
       navigate("/signup");
       return 
+    }
+    if(roles===null){
+        navigate('/home')
+        return 
     }
 
  
@@ -55,11 +59,11 @@ const roles= null
 
   return <>
     <Routes>
-      <Route path="/admin/*" element={(roles === "ADMIN") ? <Admin /> : <Login />} />
-      <Route path="/client/*" element={ <Client />} />       
+      <Route path="/admin/*" element={(roles === "ADMIN") ? <Admin /> : <Home />} />
+      <Route path="/client/*" element={(roles=== "USER") ? <Client/> : <Home />} />       
+      <Route path="/home/*" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/home" element={<Home />} />
 
 
     </Routes>
