@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 // import Header from '../Components/Dashboard/Header/Header';
 import MainHeader from '../Component/Header/Main_header';
+import Header from '../Component/Header/Header';
 
 
 
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <>
             <MainHeader />
+            <Header/>
          
             <div className="page-wrapper">
                 {/* <Routes>
