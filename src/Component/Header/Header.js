@@ -10,7 +10,7 @@ const Header = () => {
                 <div className='d-flex justify-content-center align-items-center h-100 gap-10'>
                    {Category.map((item)=>{
                     return <div className='d-flex'>
-                        <h2 className='font-weight-bold'>{item.name}</h2>
+                        <h6 className='font-weight-bold'>{item.name}</h6>
                         {/* <ChevronDown/> */}
                         <ChevronRight/>
                     </div>
