@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes, NavLink, useLocation, useNavigate } from 
 import Admin from './Admin.Route'
 import Client from "./Client.Route"
 import Home from './Home.Route'
+import Electronics from './Electronics.Route';
+import TvAndAplication from './TvAndAplication.Route';
 
 import Login from "../Layout/Auth/Login"
 import Signup from '../Layout/Auth/Signup';
@@ -62,6 +64,8 @@ const roles= null
       <Route path="/admin/*" element={(roles === "ADMIN") ? <Admin /> : <Home />} />
       <Route path="/client/*" element={(roles=== "USER") ? <Client/> : <Home />} />       
       <Route path="/home/*" element={<Home />} />
+      <Route path='/electronics/*' element={<Electronics/>}/>
+      <Route path='/appliances/*' element={<TvAndAplication/>}/>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 

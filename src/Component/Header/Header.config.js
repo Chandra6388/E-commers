@@ -9,21 +9,21 @@ export const Category = [
                 id: 11,
                 name: 'Mobiles',
                 Icon: 'fe fe-smartphone',
-                route: '/home/electronics/mobiles',
+                route: '/electronics/mobiles',
                 data: []
             },
             {
                 id: 12,
                 name: 'Laptops',
                 Icon: 'fe fe-laptop',
-                route: '/home/electronics/laptops',
+                route: '/electronics/laptops',
                 data: []
             },
             {
                 id: 13,
                 name: 'Mobile Accessories',
                 Icon: 'fe fe-camera',
-                route: '/home/electronics/cameras',
+                route: '/electronics/cameras',
                 data: []
             },  
              
@@ -32,7 +32,7 @@ export const Category = [
                 id: 14,
                 name: 'Headphones',
                 Icon: 'fe fe-headphones',
-                route: '/home/electronics/headphones',
+                route: '/electronics/headphones',
                 data: []
             },
         ]
@@ -47,14 +47,14 @@ export const Category = [
                 id: 21,
                 name: 'TVs',
                 Icon: 'fe fe-tv',
-                route: '/home/appliances/tvs',
+                route: '/appliances/tvs',
                 data: []
             },
             {
                 id: 22,
                 name: 'Air Conditioners',
                 Icon: 'fe fe-airplay',
-                route: '/home/appliances/air-conditioners',
+                route: '/appliances/air-conditioners',
                 data: []
                 
             },
@@ -62,7 +62,7 @@ export const Category = [
                 id: 23,
                 name: 'Washing Machines',
                 Icon: 'fe fe-airplay',
-                route: '/home/appliances/washing-machines',
+                route: '/appliances/washing-machines',
                 data: []
             }
         ]
@@ -77,21 +77,21 @@ export const Category = [
                 id: 31,
                 name: 'Clothing',
                 Icon: 'fe fe-user',
-                route: '/home/men/clothing',
+                route: '/men/clothing',
                 data: []
             },
             {
                 id: 32,
                 name: 'Footwear',
                 Icon: 'fe fe-user',
-                route: '/home/men/footwear',
+                route: '/men/footwear',
                 data: []
             }, 
             {
                 id: 33,
                 name: 'Watches',
                 Icon: 'fe fe-user',
-                route: '/home/men/watches',
+                route: '/men/watches',
                 data: []    
 
             },
@@ -99,14 +99,14 @@ export const Category = [
                 id: 34,
                 name: 'Wallets & Belts',
                 Icon: 'fe fe-user',
-                route: '/home/men/wallets-belts',
+                route: '/men/wallets-belts',
                 data: []
             },
             {
                 id: 35,
                 name: 'Sunglasses',
                 Icon: 'fe fe-user',
-                route: '/home/men/sunglasses',
+                route: '/men/sunglasses',
                 data: []
             }
              
@@ -123,14 +123,14 @@ export const Category = [
                 id: 41,
                 name: 'Clothing',
                 Icon: 'fe fe-user-check',
-                route: '/home/women/clothing',
+                route: '/women/clothing',
                 data: []
             },
             {
                 id: 42,
                 name: 'Footwear',
                 Icon: 'fe fe-user-check',
-                route: '/home/women/footwear',
+                route: '/women/footwear',
                 data: []
             }
             ,
@@ -138,14 +138,14 @@ export const Category = [
                 id: 43,
                 name: 'Watches',
                 Icon: 'fe fe-user-check',
-                route: '/home/women/watches',
+                route: '/women/watches',
                 data: []
             },
             {
                 id: 44,
                 name: 'Wallets & Belts',
                 Icon: 'fe fe-user-check',
-                route: '/home/women/wallets-belts',
+                route: '/women/wallets-belts',
                 data: []
             }
         ]
@@ -160,35 +160,35 @@ export const Category = [
                 id: 51,
                 name: 'Toys',
                 Icon: 'fe fe-smile',
-                route: '/home/baby-kids/toys',
+                route: '/baby-kids/toys',
                 data: []
             },
             {
                 id: 52,
                 name: 'Baby Care',
                 Icon: 'fe fe-smile',
-                route: '/home/baby-kids/baby-care',
+                route: '/baby-kids/baby-care',
                 data: []
             },
             {
                 id: 53,
                 name: 'Kids Fashion',
                 Icon: 'fe fe-smile',
-                route: '/home/baby-kids/kids-fashion',
+                route: '/baby-kids/kids-fashion',
                 data: []
             },
             {
                 id: 54,
                 name: 'Kids Accessories',
                 Icon: 'fe fe-smile',
-                route: '/home/baby-kids/kids-accessories',
+                route: '/baby-kids/kids-accessories',
                 data: []
             }
         ]
     },
     {
         id: 6,
-        name: 'Home & Furniture',
+        name:  'Home & Furniture',
         Icon: 'fe fe-home',
         route: '/home',
         data: [
@@ -196,21 +196,21 @@ export const Category = [
                 id: 61,
                 name: 'Home Decor',
                 Icon: 'fe fe-home',
-                route: '/home/furniture/home-decor',
+                route: '/furniture/home-decor',
                 data: []
             },
             {
                 id: 62,
                 name: 'Furniture',
                 Icon: 'fe fe-home',
-                route: '/home/furniture/furniture',
+                route: '/furniture/furniture',
                 data: []
             },
             {
                 id: 63,
                 name: 'Home Appliances',
                 Icon: 'fe fe-home',
-                route: '/home/furniture/home-appliances',
+                route: '/furniture/home-appliances',
                 data: []
 
             },
@@ -218,14 +218,14 @@ export const Category = [
                 id: 64,
                 name: 'Kitchen & Dining',
                 Icon: 'fe fe-home',
-                route: '/home/furniture/kitchen-dining',
+                route: '/furniture/kitchen-dining',
                 data: []
             },
             {
                 id: 65,
                 name: 'Bathroom & Sanitary',
                 Icon: 'fe fe-home',
-                route: '/home/furniture/bathroom-sanitary',
+                route: '/furniture/bathroom-sanitary',
                 data: []
             }
         ]
