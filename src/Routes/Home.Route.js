@@ -1,25 +1,38 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+
 import Header from "../Component/Header/Header";
-import Main_header from '../Component/Header/Main_header'
-import ImageSlider from '../Layout/Home/ImageSlider'
-import Men from "../Layout/Home/NewAdded/Mens";
-import Women from "../Layout/Home/NewAdded/Women";
-import Electronics from "../Layout/Home/NewAdded/Electronics";
+import Main_header from '../Component/Header/Main_header';
+import Mobile from "../Layout/electronics/Mobile";  
+import HomePage from "../Layout/Home/HomePage";
+import Laptop from "../Layout/electronics/Laptop";
+import MobileAccessories from "../Layout/electronics/MobileAccessories";
+import Headphones from "../Layout/electronics/Headphones";
+
 
 const App = () => {
   return (
     <>
-     <div className="fixed-top">
+      <div className="fixed-top">
         <Main_header className="bg-white border-bottom" />
         <Header className="bg-white border-bottom" />
       </div>
-    
-      <div className="mt-5 pt-5 mx-3">
-        <ImageSlider />
-        <Men />
-        <Women />
-        <Electronics />
+     
+      <div className="pt-5" style={{ marginTop: '90px' }}>
+      <Routes>
+      <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/electronics/mobiles" element={<Mobile />} />
+        <Route exact path="/electronics/laptops" element={<Laptop />} />
+        <Route exact path="/electronics/cameras" element={<MobileAccessories />} />
+        <Route exact path="/electronics/headphones" element={<Headphones />} />
+      </Routes>
       </div>
+
+
+
+
+
+
 
     </>
   );

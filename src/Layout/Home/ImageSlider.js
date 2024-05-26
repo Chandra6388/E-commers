@@ -27,7 +27,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div>
+    <div className='mx-2'>
     <h4>Summer Sale Is Live</h4>
       <Carousel> 
         {images.map((image, index) => (

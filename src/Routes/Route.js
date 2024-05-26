@@ -30,10 +30,10 @@ const roles= null
       navigate("/signup");
       return 
     }
-    if(roles===null){
-        navigate('/home')
-        return 
-    }
+    // if(roles===null){
+    //     navigate('/home')
+    //     return 
+    // }
 
  
 
