@@ -5,9 +5,15 @@ import Client from "./Client.Route"
 import Home from './Home.Route'
 import Electronics from './Electronics.Route';
 import TvAndAplication from './TvAndAplication.Route';
+import Men from './Men.Route';
+import Women from './Women.Route';
+import Kids from './Kids.Route';
+import Furniture from './Furniture.Route';
+import Sports from './Sports.Route';
 
 import Login from "../Layout/Auth/Login"
 import Signup from '../Layout/Auth/Signup';
+
 
  
 const Routing = () => {
@@ -66,6 +72,17 @@ const roles= null
       <Route path="/home/*" element={<Home />} />
       <Route path='/electronics/*' element={<Electronics/>}/>
       <Route path='/appliances/*' element={<TvAndAplication/>}/>
+      <Route path='/men/*' element={<Men/>}/>
+      <Route path='/women/*' element={<Women/>}/>
+      <Route path='/kids/*' element={<Kids/>}/>
+      <Route path='/furniture/*' element={<Furniture/>}/>
+      <Route path='/sports/*' element={<Sports/>}/>
+
+
+
+
+
+
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 

@@ -148,28 +148,28 @@ export const Category = [
                 id: 51,
                 name: 'Toys',
                 Icon: 'fe fe-smile',
-                route: '/baby-kids/toys',
+                route: '/kids/toys',
                 data: []
             },
             {
                 id: 52,
                 name: 'Baby Care',
                 Icon: 'fe fe-smile',
-                route: '/baby-kids/baby-care',
+                route: '/kids/baby-care',
                 data: []
             },
             {
                 id: 53,
                 name: 'Kids Fashion',
                 Icon: 'fe fe-smile',
-                route: '/baby-kids/kids-fashion',
+                route: '/kids/kids-fashion',
                 data: []
             },
             {
                 id: 54,
                 name: 'Kids Accessories',
                 Icon: 'fe fe-smile',
-                route: '/baby-kids/kids-accessories',
+                route: '/kids/kids-accessories',
                 data: []
             }
         ]
@@ -220,7 +220,7 @@ export const Category = [
     },
     {
         id: 7,
-        name: 'Sports, Books & More',
+        name: 'Sports',
         Icon: 'fe fe-book-open',
         route: '/home',
         data: [
@@ -228,37 +228,31 @@ export const Category = [
                 id: 71,
                 name: 'Sports Shoes',
                 Icon: 'fe fe-book-open',
-                route: '/home/sports-books/sports-shoes',
+                route: '/sports/shoes',
                 data: []
             },
             {
                 id: 72,
                 name: 'Sports Clothing',
                 Icon: 'fe fe-book-open',
-                route: '/home/sports-books/sports-clothing',
+                route: '/sports/sports-clothing',
                 data: []
             },
             {
                 id: 73,
                 name: 'Fitness Accessories',
                 Icon: 'fe fe-book-open',
-                route: '/home/sports-books/fitness-accessories',
+                route: '/sports/fitness-accessories',
                 data: []
             },
             {
                 id: 74,
                 name: 'Outdoor & Travel',
                 Icon: 'fe fe-book-open',
-                route: '/home/sports-books/outdoor-travel',
+                route: '/sports/outdoor-travel',
                 data: []
             },
-            {
-                id: 75,
-                name: 'Books & More',
-                Icon: 'fe fe-book-open',
-                route: '/home/sports-books/books-more',
-                data: []
-            }   
+               
         ]
     },
 ]
