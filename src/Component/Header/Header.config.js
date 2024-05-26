@@ -102,13 +102,7 @@ export const Category = [
                 route: '/men/wallets-belts',
                 data: []
             },
-            {
-                id: 35,
-                name: 'Sunglasses',
-                Icon: 'fe fe-user',
-                route: '/men/sunglasses',
-                data: []
-            }
+             
              
             
         ]
@@ -141,13 +135,7 @@ export const Category = [
                 route: '/women/watches',
                 data: []
             },
-            {
-                id: 44,
-                name: 'Wallets & Belts',
-                Icon: 'fe fe-user-check',
-                route: '/women/wallets-belts',
-                data: []
-            }
+             
         ]
     },
     {
