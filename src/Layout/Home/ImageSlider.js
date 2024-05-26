@@ -29,9 +29,9 @@ const ImageSlider = () => {
   return (
     <div>
     <h4>Summer Sale Is Live</h4>
-      <Carousel>
+      <Carousel> 
         {images.map((image, index) => (
-          <Carousel.Item key={index} interval={1000}>
+          <Carousel.Item key={index} interval={1000} >
             <img
               className="d-block w-100"
               src={image.src}

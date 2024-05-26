@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Main_Header = () => {
     return (
         <div>
-            <div className=" shadow-lg d-flex justify-content-between mt-1" style={{ width: '100%' }}>
+            <div className="bg-white shadow-lg d-flex justify-content-between" style={{ width: '100%' }}>
                  
                 <div className="main-logo d-lg-flex align-items-center">
                     <img

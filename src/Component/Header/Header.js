@@ -8,8 +8,8 @@ const Header = () => {
         <>
             <div style={{ height: "50px", backgroundColor: '#4287f5' }}>
                 <div className='d-flex justify-content-center align-items-center h-100 gap-10'>
-                   {Category.map((item)=>{
-                    return <div className='d-flex'>
+                   {Category.map((item , index)=>{
+                    return <div className='d-flex' key={index}>
                         <h6 className='font-weight-bold'>{item.name}</h6>
                         {/* <ChevronDown/> */}
                         <ChevronRight/>
