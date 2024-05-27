@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
+
 const products = [
     {
       id: 1,
       name: 'Basic Tee',
-      href: '#',
+      Route: '/product_details',
       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$35',
@@ -11,7 +13,7 @@ const products = [
     {
         id: 2,
         name: 'Basic Tee',
-        href: '#',
+        Route: '/product_details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -20,7 +22,7 @@ const products = [
       {
         id: 3,
         name: 'Basic Tee',
-        href: '#',
+        Route: '/product_details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -29,7 +31,7 @@ const products = [
       {
         id: 4,
         name: 'Basic Tee',
-        href: '#',
+        Route: '/product_details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -58,10 +60,10 @@ const products = [
                 <div className="mt-4 flex justify-between">
                   <div>
                     <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
+                      <Link to={product.Route} className="font-medium capitalize hover:text-gray-800"  style={{color: '#000000'}}>{product.name}</Link>
+                        {/* <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
-                      </a>
+                      </Link> */}
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                   </div>
