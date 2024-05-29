@@ -39,7 +39,7 @@ const Header = () => {
                 >
                   {data.data.map((item) => (
                     <li key={item.id}>
-                    {console.log(item.route)}
+                   
                       <Link to={item.route} className="dropdown-item d-flex align-items-center">
                         <i className={item.Icon} style={{ marginRight: '8px' }}></i>
                         {item.name}

@@ -4,7 +4,7 @@ const products = [
     {
       id: 1,
       name: 'Basic Tee',
-      Route: '/product_details',
+      Route: '/product/details',
       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$35',
@@ -13,7 +13,7 @@ const products = [
     {
         id: 2,
         name: 'Basic Tee',
-        Route: '/product_details',
+        Route: '/product/details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -22,7 +22,7 @@ const products = [
       {
         id: 3,
         name: 'Basic Tee',
-        Route: '/product_details',
+        Route: '/product/details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -31,7 +31,7 @@ const products = [
       {
         id: 4,
         name: 'Basic Tee',
-        Route: '/product_details',
+        Route: '/product/details',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
@@ -51,19 +51,19 @@ const products = [
             {products.map((product,index) => (
               <div key={product.id} className="group relative" >
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <Link to={product.Route}>
                   <img
                     src={product.imageSrc}
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />
+                </Link>
                 </div>
                 <div className="mt-4 flex justify-between">
                   <div>
                     <h3 className="text-sm text-gray-700">
                       <Link to={product.Route} className="font-medium capitalize hover:text-gray-800"  style={{color: '#000000'}}>{product.name}</Link>
-                        {/* <span aria-hidden="true" className="absolute inset-0" />
-                        {product.name}
-                      </Link> */}
+                        
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                   </div>

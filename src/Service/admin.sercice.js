@@ -8,7 +8,6 @@ import { header } from "../Utils/ApiHeader";
 
 // ALL CLIENTS
 export async function ALL_CLIENTS(data, token) {
-    console.log("token :", token)
     try {
         const res = await axios.post(`${Config.base_url}getall/clients`, data, {
             
@@ -21,7 +20,6 @@ export async function ALL_CLIENTS(data, token) {
             },
         })
 
-        console.log("res service :", res)
 
         return await res?.data;
     }

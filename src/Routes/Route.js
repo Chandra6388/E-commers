@@ -13,6 +13,7 @@ import Sports from './Sports.Route';
 
 import Login from "../Layout/Auth/Login"
 import Signup from '../Layout/Auth/Signup';
+import ProductDetails from './ProductDetails.Route';
 
 
  
@@ -77,6 +78,8 @@ const roles= null
       <Route path='/kids/*' element={<Kids/>}/>
       <Route path='/furniture/*' element={<Furniture/>}/>
       <Route path='/sports/*' element={<Sports/>}/>
+      <Route path='/product/*' element={<ProductDetails/>}/>
+
 
 
 
