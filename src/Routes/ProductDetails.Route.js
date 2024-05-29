@@ -10,7 +10,7 @@ import AddToCart from "../Layout/ProductDetails/AddToCart";
 const ProductDetails = () => {
   return (
     <>
-      <div className="fixed-top">
+      <div className="fixed-top ">
         <Main_header className="bg-white border-bottom" />
         <Header className="bg-white border-bottom" />
       </div>

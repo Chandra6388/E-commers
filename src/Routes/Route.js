@@ -22,6 +22,8 @@ const Routing = () => {
   const navigate = useNavigate()
 const roles= null
 
+
+console.log(location.pathname)
   useEffect(() => {
     if (location.pathname === "/forget") {
       navigate("/forget");
@@ -33,19 +35,16 @@ const roles= null
     }
 
     if (location.pathname === "/") {
-      navigate("/login");
+      navigate("/home");
     }
     if (location.pathname === "/signup") {
       navigate("/signup");
       return 
     }
-    // if(roles===null){
-    //     navigate('/home')
-    //     return 
-    // }
-
- 
-
+    else if(roles==null){
+      navigate('/home');
+      return
+    }
     if (roles !== null) {
       if (roles === "ADMIN" && location.pathname === "/login") {
         navigate("/admin/dashboard");
@@ -54,14 +53,7 @@ const roles= null
         navigate("/client/dashboard");
         window.location.reload()
       }
-      else if (roles === "SUBADMIN" && location.pathname === "/login") {
-        navigate("/subadmin/clients");
-        window.location.reload()
-      }
-      else if (roles === "SUPERADMIN" && location.pathname === "/login") {
-        navigate("/super/dashboard");
-        window.location.reload()
-      }
+       
     } 
   }, [location.pathname])
 
@@ -79,13 +71,6 @@ const roles= null
       <Route path='/furniture/*' element={<Furniture/>}/>
       <Route path='/sports/*' element={<Sports/>}/>
       <Route path='/product/*' element={<ProductDetails/>}/>
-
-
-
-
-
-
-
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
