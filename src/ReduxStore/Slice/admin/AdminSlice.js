@@ -1,18 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// import { DispatchLogin } from "../../../Layout/Auth/Login";
-// import { GET_HELP_REQUEST } from "../../../Service/admin.service";
+
+import { LOGIN_USER } from "../../../Service/admin.service";
 
 
-// export const GET_HELPS = createAsyncThunk("user/all/helps", async (data) => {
-//     const { user_id, token } = data
-    
-//     try {
-//         const res = await GET_HELP_REQUEST({ _id: user_id }, token);
-//         return await res;
-//     } catch (err) {
-//         return err;
-//     }
-// });
+export const Login_User = createAsyncThunk("/login", async (data) => {
+    try {
+        const res = await LOGIN_USER(data);
+        return await res;
+    } catch (err) {
+        return err;
+    }
+});
 
 const AdminHelpSlice = createSlice({
     name: "AdminHelpSlice",
@@ -20,25 +18,26 @@ const AdminHelpSlice = createSlice({
         isLoading: false,
         isError: false,
         helps: [],
-        status: false
+        status: false,
+        login_user: [],
     },
 
     recuders: {},
-    // extraReducers: {
-
-        // [GET_HELPS.pending]: (state, { payload }) => {
-        //     // state.isLoading = false;
-        //     // return { ...state, get_dashboard: [], isLoading: true };
-        // },
-        // [GET_HELPS.fulfilled]: (state, { payload }) => {
-        //     // state.isLoading = false;
-        //     return { ...state, helps: payload, isLoading: false };
-        // },
-        // [GET_HELPS.rejected]: (state, action) => {
-        //     // return { ...state, get_dashboard: action, isLoading: false };
-        // },
-
-    // },
+    extraReducers: (builder) => {
+        builder
+          .addCase(Login_User.pending, (state, action) => {
+            state.isLoading = true;
+          })
+          .addCase(Login_User.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.login_user = action.payload;
+          })
+          .addCase(Login_User.rejected, (state, action) => {
+            state.isLoading = false;
+            state.isError = true;
+          })
+          
+      },
 });
 
 

@@ -41,10 +41,7 @@ console.log(location.pathname)
       navigate("/signup");
       return 
     }
-    else if(roles==null){
-      navigate('/home');
-      return
-    }
+     
     if (roles !== null) {
       if (roles === "ADMIN" && location.pathname === "/login") {
         navigate("/admin/dashboard");
