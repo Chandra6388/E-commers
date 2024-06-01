@@ -19,5 +19,20 @@ export async function LOGIN_USER(data, token) {
     }
 
 }
+
+// Signup-USER
+export async function SIGNUP_USER(data, token) {
+    try {
+        const res = await axios.post(`${Config.base_url}signup`, data, {
+            data: {},
+        })
+        return await res?.data;
+    }
+    catch (err) {
+        return await err;
+
+    }
+
+}
  
  

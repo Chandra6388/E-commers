@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-import { LOGIN_USER } from "../../../Service/admin.service";
+import { LOGIN_USER , SIGNUP_USER } from "../../../Service/admin.service";
 
 
 export const Login_User = createAsyncThunk("/login", async (data) => {
@@ -12,6 +12,15 @@ export const Login_User = createAsyncThunk("/login", async (data) => {
     }
 });
 
+export const SignupUser = createAsyncThunk("/signup", async (data) => {
+  try {
+      const res = await SIGNUP_USER(data);
+      return await res;
+  } catch (err) {
+      return err;
+  }
+});
+
 const AdminHelpSlice = createSlice({
     name: "AdminHelpSlice",
     initialState: {
@@ -20,6 +29,7 @@ const AdminHelpSlice = createSlice({
         helps: [],
         status: false,
         login_user: [],
+        signupUser: [],
     },
 
     recuders: {},
@@ -35,6 +45,10 @@ const AdminHelpSlice = createSlice({
           .addCase(Login_User.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
+          })
+          .addCase(SignupUser.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.signupUser = action.payload;
           })
           
       },

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Route, Routes, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Admin from './Admin.Route'
 import Client from "./Client.Route"
 import Home from './Home.Route'
@@ -37,17 +37,21 @@ console.log(location.pathname)
     if (location.pathname === "/") {
       navigate("/home");
     }
-    if (location.pathname === "/signup") {
-      navigate("/signup");
+    if (location.pathname === "/register") {
+      navigate("/register");
+      return 
+    }
+    if (location.pathname === "/login") {
+      navigate("/login");
       return 
     }
      
     if (roles !== null) {
-      if (roles === "ADMIN" && location.pathname === "/login") {
-        navigate("/admin/dashboard");
+      if (roles === "SHELLER" && location.pathname === "/login") {
+        navigate("/home");
         window.location.reload()
       } else if (roles === "USER" && location.pathname === "/login") {
-        navigate("/client/dashboard");
+        navigate("/home");
         window.location.reload()
       }
        
@@ -69,7 +73,8 @@ console.log(location.pathname)
       <Route path='/sports/*' element={<Sports/>}/>
       <Route path='/product/*' element={<ProductDetails/>}/>
       <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/register" element={<Signup />} />
+
 
 
     </Routes>
