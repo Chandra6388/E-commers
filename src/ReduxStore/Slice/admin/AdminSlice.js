@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-import { LOGIN_USER , SIGNUP_USER } from "../../../Service/admin.service";
+import { LOGIN_USER , SIGNUP_USER , UPLOADE_IMAGE } from "../../../Service/admin.service";
 
 
 export const Login_User = createAsyncThunk("/login", async (data) => {
@@ -21,6 +21,16 @@ export const SignupUser = createAsyncThunk("/signup", async (data) => {
   }
 });
 
+export const UpLoadeImage = createAsyncThunk("/product/add", async (data) => {
+  try {
+      const res = await UPLOADE_IMAGE(data);
+      return await res;
+  } catch (err) {
+      return err;
+  }
+});
+
+
 const AdminHelpSlice = createSlice({
     name: "AdminHelpSlice",
     initialState: {
@@ -30,6 +40,7 @@ const AdminHelpSlice = createSlice({
         status: false,
         login_user: [],
         signupUser: [],
+        upLoadeImage: []
     },
 
     recuders: {},
@@ -47,6 +58,10 @@ const AdminHelpSlice = createSlice({
             state.isError = true;
           })
           .addCase(SignupUser.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.signupUser = action.payload;
+          })
+          .addCase(UpLoadeImage.fulfilled, (state, action) => {
             state.isLoading = false;
             state.signupUser = action.payload;
           })

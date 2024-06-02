@@ -34,5 +34,21 @@ export async function SIGNUP_USER(data, token) {
     }
 
 }
+
+
+// Uploade Product-USER
+export async function UPLOADE_IMAGE(data, token) {
+    try {
+        const res = await axios.post(`${Config.base_url}product/add`, data, {
+            data: {},
+        })
+        return await res?.data;
+    }
+    catch (err) {
+        return await err;
+
+    }
+
+}
  
  

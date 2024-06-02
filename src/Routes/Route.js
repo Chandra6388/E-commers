@@ -14,6 +14,7 @@ import Sports from './Sports.Route';
 import Login from "../Layout/Auth/Login"
 import Signup from '../Layout/Auth/Signup';
 import ProductDetails from './ProductDetails.Route';
+import Upload from '../Layout/Sheller/AddProduct'
 
 
  
@@ -23,7 +24,6 @@ const Routing = () => {
 const roles= null
 
 
-console.log(location.pathname)
   useEffect(() => {
     if (location.pathname === "/forget") {
       navigate("/forget");
@@ -74,6 +74,8 @@ console.log(location.pathname)
       <Route path='/product/*' element={<ProductDetails/>}/>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Signup />} />
+      <Route path="/upload" element={<Upload />} />
+
 
 
 

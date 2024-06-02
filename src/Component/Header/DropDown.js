@@ -23,7 +23,7 @@ const DropDown = () => {
                 : user_Details && user_Details.Role == "SHELLER" ?
                     <>
                         <img src="assets/img/profile.png" style={{ borderRadius: '50%', height: '50px' }} alt="img" />
-                        <button className='btn btn-primary'>Shell</button>
+                        <Link className='btn btn-primary' to={'/upload'}>Upload Product</Link>
                     </> :
                     <>
                     <Link className='btn btn-primary' to={'/login'}>Login</Link>
