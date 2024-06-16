@@ -36,7 +36,7 @@ const AdminHelpSlice = createSlice({
     initialState: {
         isLoading: false,
         isError: false,
-        helps: [],
+         
         status: false,
         login_user: [],
         signupUser: [],
