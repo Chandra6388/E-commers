@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes, NavLink, useLocation, useNavigate } from 
 const Admin = () => {
     return (
         <>
-        cpp
+       
              
         </>
     )
